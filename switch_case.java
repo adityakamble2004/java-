@@ -2,9 +2,10 @@ import java.util.Scanner;
 public class switch_case {
     public static void main(String[] args) {
         int day=0;
-        Scanner sc=new Scanner(System.in);
-        System.out.println("enter any number 1-7");
-        day=sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("enter any number 1-7");
+            day=sc.nextInt();
+        }
         switch (day) {
             case 1:
                 System.out.print("Sunday");
